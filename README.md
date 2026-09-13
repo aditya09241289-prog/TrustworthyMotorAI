@@ -91,48 +91,6 @@ The dashboard is designed to expose model outputs and trust-related information 
 
 ---
 
-## System Architecture
-
-```text
-                    ┌───────────────────────┐
-                    │   IoT Motor Sensors   │
-                    └───────────┬───────────┘
-                                │
-                                ▼
-                    ┌───────────────────────┐
-                    │ Data Processing /     │
-                    │ Feature Preparation   │
-                    └───────────┬───────────┘
-                                │
-                                ▼
-                    ┌───────────────────────┐
-                    │   Fault Diagnosis AI  │
-                    │                       │
-                    │  Motor Classification│
-                    └───────────┬───────────┘
-                                │
-                     ┌──────────┴──────────┐
-                     │                     │
-                     ▼                     ▼
-            ┌─────────────────┐   ┌──────────────────┐
-            │ Trust Evaluation│   │ Explainability   │
-            └────────┬────────┘   └────────┬─────────┘
-                     │                     │
-                     └──────────┬──────────┘
-                                ▼
-                    ┌───────────────────────┐
-                    │ Trustworthy AI        │
-                    │ Motor Decision        │
-                    └───────────┬───────────┘
-                                │
-                                ▼
-                    ┌───────────────────────┐
-                    │ Interactive Dashboard │
-                    └───────────────────────┘
-```
-
----
-
 ## Technology Stack
 
 ### Machine Learning
@@ -159,38 +117,6 @@ The dashboard is designed to expose model outputs and trust-related information 
 * GitHub
 * Virtual environments
 * PowerShell
-
----
-
-## Project Structure
-
-```text
-Trustworthy_IoT_Motor_AI/
-│
-├── data/
-│   └── motor_iot_dataset.csv
-│
-├── notebooks/
-│
-├── src/
-│   ├── __init__.py
-│   ├── data_generator.py
-│   ├── evaluate_paderborn_model.py
-│   ├── explain.py
-│   ├── fusion.py
-│   ├── generate_tampered_data.py
-│   ├── paderborn_loader.py
-│   ├── train_fault_model.py
-│   ├── train_paderborn_motor.py
-│   └── train_trust_model.py
-│
-├── dashboard.py
-├── dashboard_backup.py
-├── run_pipeline.py
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
 
 ---
 
@@ -315,32 +241,6 @@ The Streamlit application will open in your browser.
 
 ---
 
-## Pipeline
-
-The project can be viewed as the following workflow:
-
-```text
-Dataset
-   ↓
-Preprocessing
-   ↓
-Fault Model Training
-   ↓
-Fault Prediction
-   ↓
-Trust Model
-   ↓
-Tampering / Integrity Analysis
-   ↓
-Explainability
-   ↓
-Final Trustworthy Decision
-   ↓
-Dashboard
-```
-
----
-
 ## Dataset and Experimental Workflow
 
 The project contains a local motor IoT dataset and also includes tooling for working with the Paderborn motor dataset workflow.
@@ -389,6 +289,14 @@ Potential extensions include:
 * Integration with industrial IoT platforms
 
 ---
+
+## Result
+<img width="1902" height="865" alt="Screenshot 2026-09-14 012518" src="https://github.com/user-attachments/assets/3b45b008-3dea-42d4-b228-a4101004107e" />
+<img width="1890" height="923" alt="Screenshot 2026-09-14 012532" src="https://github.com/user-attachments/assets/7ac5fbd4-b4ff-488e-802e-7d932581d060" />
+<img width="1901" height="937" alt="Screenshot 2026-09-14 012546" src="https://github.com/user-attachments/assets/2f19e421-caad-401b-aca0-6984dabc56f7" />
+<img width="1907" height="923" alt="Screenshot 2026-09-14 012559" src="https://github.com/user-attachments/assets/0e690a5c-2327-4ed3-8f40-421a74982d9c" />
+
+
 
 ## Disclaimer
 
